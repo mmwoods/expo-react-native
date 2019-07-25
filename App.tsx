@@ -33,8 +33,7 @@ export default function App() {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingTop: 18,
-        paddingBottom: 18
+        paddingBottom: 35
       }}
     >
       <View
@@ -55,7 +54,7 @@ export default function App() {
         </Text>
       </View>
 
-      <Text style={{ fontSize: 18, paddingRight: 10 }}>-${props.amount}</Text>
+      <Text style={{ fontSize: 18, paddingRight: 15 }}>-${props.amount}</Text>
     </View>
   );
 
@@ -72,7 +71,25 @@ export default function App() {
         />
       </View>
 
-      <ScrollView style={{ flex: 2 }}>
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontSize: 17, fontWeight: "500" }}>Balance</Text>
+        <View style={{ flex: 1, alignItems: "center" }}>
+          <Text
+            style={{
+              fontSize: 60,
+              fontWeight: "500",
+              paddingTop: 40,
+              paddingBottom: 20
+            }}
+          >
+            $500.26
+          </Text>
+        </View>
+      </View>
+
+      <Text style={{ fontSize: 15, color: "#dfdfdf" }}>Today</Text>
+
+      <ScrollView style={{ flex: 2, marginTop: 15 }}>
         <Deduction
           title="Uber EATS"
           amount={25}
