@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import { Transaction } from "../components/Transaction/Transaction";
 import { transactions } from "../data/transactions";
+import { Heading } from "../components/Heading/Heading";
 
 /**
  * Displays the account value and spending activity (as a series of transactions).
@@ -20,31 +21,7 @@ import { transactions } from "../data/transactions";
 export const SpendingScreen = () => {
   return (
     <>
-      {/* Header */}
-      <View
-        style={{
-          backgroundColor: "#FF8365",
-          flex: 1,
-          alignItems: "center"
-        }}
-      >
-        <SafeAreaView
-          style={{
-            display: "flex",
-            alignItems: "center"
-          }}
-        >
-          <Text
-            style={{
-              fontSize: 60,
-              fontWeight: "500",
-              paddingTop: 30
-            }}
-          >
-            $500.26
-          </Text>
-        </SafeAreaView>
-      </View>
+      <Heading title="$212.35" />
 
       {/* Activity */}
       <View style={{ flex: 1, backgroundColor: "#f6f6f6" }} />

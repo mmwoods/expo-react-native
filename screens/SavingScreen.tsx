@@ -1,5 +1,6 @@
 import React from "react";
 import { View, SafeAreaView, Text } from "react-native";
+import { Heading } from "../components/Heading/Heading";
 
 /**
  * Displays savings history and savings goals.
@@ -14,9 +15,13 @@ import { View, SafeAreaView, Text } from "react-native";
  * @author Mitchell Woods <github.com/mmwoods>
  */
 export const SavingScreen = () => (
-  <SafeAreaView style={{ flex: 1, backgroundColor: "#fff", margin: 20 }}>
-    <View style={{ flex: 1, backgroundColor: "#fff", alignItems: "center" }}>
-      <Text>Saving</Text>
-    </View>
-  </SafeAreaView>
+  <>
+    <Heading title="20%" />
+
+    <SafeAreaView style={{ flex: 3, backgroundColor: "#fff", margin: 20 }}>
+      <View style={{ flex: 1, backgroundColor: "#fff", alignItems: "center" }}>
+        <Text>Saving</Text>
+      </View>
+    </SafeAreaView>
+  </>
 );

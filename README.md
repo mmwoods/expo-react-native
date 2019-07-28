@@ -1,5 +1,7 @@
 # Expo React Native
 
+<img src="./assets/example.png">
+
 ## External Packages
 
 - Navigation is handled by [React Navigation](https://reactnavigation.org/en/)

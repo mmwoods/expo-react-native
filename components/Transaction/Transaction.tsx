@@ -28,7 +28,7 @@ export const Transaction: React.FC<TransactionProps> = props => (
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
-      paddingBottom: 30
+      paddingBottom: 25
     }}
   >
     <View
