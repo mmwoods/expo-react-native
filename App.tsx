@@ -1,14 +1,16 @@
 import React from "react";
+// Navigation
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
-import { TransactionScreen } from "./screens/TransactionScreen";
-import { HomeScreen } from "./screens/HomeScreen";
-
+// Screens
+import { SpendingScreen, SendingScreen, SavingScreen } from "./screens/index";
+// Icons
 import { Ionicons } from "@expo/vector-icons";
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Home: { screen: HomeScreen },
-    Transactions: { screen: TransactionScreen }
+    Spending: { screen: SpendingScreen },
+    Sending: { screen: SendingScreen },
+    Saving: { screen: SavingScreen }
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -16,10 +18,13 @@ const TabNavigator = createBottomTabNavigator(
         const { routeName } = navigation.state;
         let IconComponent = Ionicons;
         let iconName;
-        if (routeName === "Home") {
-          iconName = `ios-home`;
-        } else if (routeName === "Transactions") {
-          iconName = `ios-card`;
+
+        if (routeName === "Spending") {
+          iconName = `ios-pulse`;
+        } else if (routeName === "Sending") {
+          iconName = `ios-send`;
+        } else if (routeName === "Saving") {
+          iconName = `ios-airplane`;
         }
 
         // You can return any component that you like here!
