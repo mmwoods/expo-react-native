@@ -4,3 +4,5 @@ export * from "./SpendingScreen";
 export * from "./SendingScreen";
 // Export Saving Screen
 export * from "./SavingScreen";
+// Export Details Screen
+export * from "./DetailsScreen";

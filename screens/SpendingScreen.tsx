@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, SafeAreaView, ScrollView } from "react-native";
+import { Text, View, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { Transaction } from "../components/Transaction/Transaction";
@@ -17,8 +17,9 @@ import { Heading } from "../components/Heading/Heading";
  * ```
  *
  * @author Mitchell Woods <github.com/mmwoods>
+ * @function `onTouch` Changes the view to the Details Screen, and passes in extra transaction data as props.
  */
-export const SpendingScreen = () => {
+export const SpendingScreen = props => {
   return (
     <>
       <Heading title="$212.35" />
@@ -56,6 +57,14 @@ export const SpendingScreen = () => {
               amount={item.amount}
               image={item.image}
               type={item.type}
+              onTouch={() =>
+                props.navigation.navigate("Details", {
+                  title: item.title,
+                  amount: item.amount,
+                  image: item.image,
+                  type: item.type
+                })
+              }
             />
           ))}
         </ScrollView>

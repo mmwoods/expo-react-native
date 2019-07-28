@@ -11,6 +11,14 @@ Displays a transaction with the associated company/user image, title, and amount
   amount={20.55}
   image="uberLogo.png"
   type="deduction"
+  onTouch={() =>
+    props.navigation.navigate("Details", {
+      title: "Uber EATS",
+      amount: {20.55},
+      image: "uberLogo.png",
+      type: "deduction"
+    })
+  }
 />
 ```
 
@@ -22,3 +30,9 @@ Displays a transaction with the associated company/user image, title, and amount
 | amount | `number` | Amount of the deduction.   | `true`   |
 | type   | `string` | Type of transaction.       | `true`   |
 | image  | `string` | Image of the Company/User. | `false`  |
+
+## Functions
+
+### `onTouch`
+
+Changes the view to the Details Screen, and passes in extra transaction data as props.

@@ -1,16 +1,41 @@
 import React from "react";
 // Navigation
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import {
+  createBottomTabNavigator,
+  createStackNavigator,
+  createAppContainer
+} from "react-navigation";
 // Screens
-import { SpendingScreen, SendingScreen, SavingScreen } from "./screens/index";
+import {
+  SpendingScreen,
+  DetailsScreen,
+  SendingScreen,
+  SavingScreen
+} from "./screens/index";
 // Icons
 import { Ionicons } from "@expo/vector-icons";
 
+const SpendingStack = createStackNavigator(
+  {
+    Spending: SpendingScreen,
+    Details: DetailsScreen
+  },
+  {
+    defaultNavigationOptions: {
+      headerTransparent: true,
+      headerStyle: {
+        backgroundColor: "#FF8365"
+      },
+      headerTintColor: "#fff"
+    }
+  }
+);
+
 const TabNavigator = createBottomTabNavigator(
   {
-    Spending: { screen: SpendingScreen },
-    Sending: { screen: SendingScreen },
-    Saving: { screen: SavingScreen }
+    Spending: SpendingStack,
+    Sending: SendingScreen,
+    Saving: SavingScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
