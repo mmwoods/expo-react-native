@@ -1,5 +1,15 @@
 # Expo React Native
 
+Practice using React Native with the Expo CLI
+
+## Screens
+
+### Spending Screen
+
+Displays the account value and spending activity (as a series of transactions).
+
+<img src="./assets/spending.png" alt="Spending Screen">
+
 ## External Packages
 
 - Navigation is handled by [React Navigation](https://reactnavigation.org/en/)
